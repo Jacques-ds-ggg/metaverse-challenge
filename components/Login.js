@@ -1,6 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { useMoralis } from "react-moralis";
+import fox from "../public/planet-logo.jpg";
+import cover from "../public/mask-cover.jpg";
 
 function Login() {
     const { authenticate } = useMoralis();
@@ -11,12 +13,15 @@ function Login() {
             <div className="flex flex-col absolute z-50 h-4/6 w-full items-center justify-center space-y-4">
 
                 {/* PapaFam Logo */}
-                <Image className="object-cover rounded-full" src="https://links.papareact.com/3pi" height={200} width={200}/>
+                <Image className="object-cover rounded-full" 
+                    src={fox} 
+                    height={200} 
+                    width={200}
+                />
 
                 {/* Login Button */}
-                <button 
-                    onClick={authenticate}
-                    className="bg-yellow-500 rounded-lg font-bold p-5 animate-pulse"
+                <button onClick={authenticate}
+                    className="bg-purple-800 rounded-xl font-bold p-5 animate-pulse"
                 >
                     Login to the Metaverse
                 </button>
@@ -25,7 +30,10 @@ function Login() {
                 {/* Remember to add the required next.config.js 
                 file in root  to allow the domains to be accessed
                 & Restart the server!! */}                
-                <Image src="https://links.papareact.com/55n" layout="fill" objectFit="cover" />
+                <Image src={cover}
+                    layout="fill"
+                    objectFit="cover"
+                />
             </div>
         </div>
     )

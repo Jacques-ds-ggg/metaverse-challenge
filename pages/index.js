@@ -18,9 +18,10 @@ export default function Home() {
       <h1>Welcome to the Metaverse Challenge-App</h1>
       <button
         onClick={logout}
-        className="login_cta py-2 px-4 rounded-sm font-bold text-lg bg-orange-400 text-white hover:bg-orange-500 flex items-center"
+        className="login_cta py-2 px-4 rounded-sm font-bold text-lg 
+        bg-orange-400 text-white hover:bg-orange-500 flex items-center"
       >
-        Layout
+        Logout
       </button>
     </div>
   )
