@@ -7,6 +7,7 @@ import Messages from '../components/Messages';
 export default function Home() {
   const { isAuthenticated, logout } = useMoralis();
 
+          // Actual app unless not authenticated then the login screen will be in front
   if (!isAuthenticated) return <Login/>;
 
 
@@ -14,23 +15,13 @@ export default function Home() {
     <div className="h-screen overflow-y-scroll bg-gradient-to-b from-black to-fuchsia-900 overflow-hidden">
       <Head>
         <title>Jacques-Metaverse-Challenge</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/moralis.png" />
       </Head>
 
-      <div className="max-w-screen-2xl mx-auto">                
-        {/* Header */}
+      <div className="max-w-screen-2xl mx-auto"> 
         <Header />
-        {/* Messages */} 
         <Messages />      
       </div>   
-
-      <button
-        onClick={logout}
-        className="login_cta py-2 px-4 rounded-sm font-bold text-lg 
-        bg-fuchsia-400 text-white hover:bg-fuchsia-500 flex items-center"
-      >
-        Logout
-      </button>
     </div>
   )
 }
